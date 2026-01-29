@@ -1,0 +1,26 @@
+[
+  {
+    "id": "my_mdec_derantau",
+    "name": "MDEC DE Rantau",
+    "url": "https://mdec.my/derantau",
+    "check_frequency_hours": 24,
+    "selector": "div.content-wrapper",
+    "visa_types": ["digital_nomad"]
+  },
+  {
+    "id": "my_esd_announcements",
+    "name": "ESD Announcements",
+    "url": "https://esd.imi.gov.my/portal/latest-news/announcement/",
+    "check_frequency_hours": 6,
+    "selector": "div.news-list",
+    "visa_types": ["employment_pass", "pvp"]
+  },
+  {
+    "id": "my_labuan_fsa",
+    "name": "Labuan FSA Guidelines",
+    "url": "https://www.labuanfsa.gov.my/",
+    "check_frequency_hours": 48,
+    "selector": "table.guidelines-table",
+    "visa_types": ["labuan_director", "labuan_employment"]
+  }
+]

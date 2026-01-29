@@ -1,0 +1,35 @@
+{
+  "country": "Malaysia",
+  "region": "Labuan",
+  "visa_name": "Labuan Work Permit (Director)",
+  "target_audience": ["Business Owners", "Entrepreneurs", "High Net Worth Individuals"],
+  "benefits": [
+    "2-year renewable visa",
+    "0% or 3% corporate tax rate",
+    "Include family dependents",
+    "No physical stay requirement in Labuan"
+  ],
+  "requirements": {
+    "financial": {
+      "paid_up_capital_myr": "Varies (Consult Company Secretary)",
+      "currency": "any (USD preferred for trading)",
+      "note": "Capital requirements depend on business activity. Many structures do not require high upfront paid-up capital."
+    },
+    "documents": [
+      "Passport copies (all pages)",
+      "Educational certificates / Resume",
+      "Business Plan",
+      "Reference Letter"
+    ],
+    "timeline_weeks": "4-8"
+  },
+  "costs_estimated_usd": {
+    "setup_fee": 2000,
+    "government_fees": 1500,
+    "annual_maintenance": 1500
+  },
+  "sources": [
+    "Labuan FSA Official Guidelines",
+    "Immigration Department of Malaysia"
+  ]
+}

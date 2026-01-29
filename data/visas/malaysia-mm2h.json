@@ -1,0 +1,57 @@
+{
+  "country": "Malaysia",
+  "visa_name": "MM2H (Malaysia My Second Home)",
+  "type": "Social Visit Pass (Renewable)",
+  "tiers": [
+    {
+      "name": "Silver",
+      "duration_years": 5,
+      "requirements": {
+        "fixed_deposit_myr": 150000,
+        "min_age": 30,
+        "residency_days_per_year": 60
+      },
+      "benefits": [
+        "Renewable for 5 years",
+        "Dependents allowed"
+      ]
+    },
+    {
+      "name": "Gold",
+      "duration_years": 15,
+      "requirements": {
+        "fixed_deposit_myr": 2000000,
+        "min_age": 30,
+        "residency_days_per_year": 60
+      },
+      "benefits": [
+        "Renewable for 15 years",
+        "Dependents allowed"
+      ]
+    },
+    {
+      "name": "Platinum",
+      "duration_years": 20,
+      "requirements": {
+        "fixed_deposit_myr": 5000000,
+        "min_age": 30,
+        "residency_days_per_year": 60
+      },
+      "benefits": [
+        "Permanent Resident (PR) eligibility after defined period",
+        "Permission to work/invest",
+        "No age limit"
+      ]
+    }
+  ],
+  "general_requirements": [
+    "Medical Checkup",
+    "Medical Insurance",
+    "Police Clearance (Good Conduct)"
+  ],
+  "fees": {
+    "agency_fee_estimated": 10000,
+    "government_fee": 500
+  },
+  "last_updated": "2024-12-01T00:00:00.000Z"
+}

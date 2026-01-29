@@ -1,0 +1,24 @@
+{
+  "visa_name": "DE Rantau Nomad Pass",
+  "type": "Professional Visit Pass (Pas Lawatan Ikhtisas)",
+  "duration": "3 to 12 months, renewable for an additional 12 months (total up to 24 months)",
+  "fees": {
+    "main_applicant": "MYR 1,000.00",
+    "dependent": "MYR 500.00"
+  },
+  "eligibility": [
+    "Qualified foreign digital professionals or digital nomads.",
+    "Applicants must be either a Digital Freelancer, Independent Contractor, or Remote Worker.",
+    "For Digital Freelancers/Independent Contractors: Must have active project contract(s) with a total duration > 3 months. Clients can be both local & foreign companies.",
+    "For Remote Workers: Must have an active employment contract with a duration > 3 months. Employer must be foreign/non-Malaysian based.",
+    "Open to Tech Talent/Professionals (including Software Engineers, Backend Engineers, Cloud, Cybersecurity, Blockchain, AI, Machine Learning, Data-related fields, Digital Marketing, Digital Creative Content, Digital Content Development, User Experience, User Interface, and other related positions).",
+    "Open to Non-Tech Talent/Professionals (including Chief Executive Officer, Chief Operations Officer, Business Development (Growth Manager), Marketing Manager, Chief Financial Officer, Finance Manager/Accountant, Sales Manager, Customer Success Manager, Human Resources Manager, Legal Counsel, Public Relation Manager, Consultant, Customer Service Manager/Representative/Specialist, Communications & Public Relations Manager, Administrative Manager, Technical Writer, Tax Specialist, Tax Accountant, Production Manager, Supply Chain Manager, and other related positions).",
+    "Allowed to bring spouse & child/children.",
+    "Allowed to bring parent/parents for the main pass holder only.",
+    "Open to citizens of all nationalities except Israel."
+  ],
+  "income_requirement": "More than USD 24,000 per year for Tech Talent/Professionals; More than USD 60,000 per year for Non-Tech Talent/Professionals.",
+  "last_updated": "2023-10-27T10:00:00Z",
+  "source_file": "my_mdec_derantau_2026-01-29T01-05-11-846Z.html",
+  "processed_at": "2026-01-29T01:23:57.424Z"
+}

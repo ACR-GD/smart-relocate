@@ -1,0 +1,50 @@
+{
+  "last_updated": "2026-01-29T10:00:00Z",
+  "locations": [
+    {
+      "id": "kl_mont_kiara",
+      "name": "Mont Kiara, KL",
+      "vibe": "Expat Family Haven",
+      "internet_speed_avg_mbps": 500,
+      "cost_of_living_usd": {
+        "rent_1br": 650,
+        "rent_3br": 1200,
+        "coffee": 3.50,
+        "coworking_day_pass": 10
+      },
+      "digital_nomad_score": 8.5,
+      "pros": ["Walkable", "International Schools", "Safe"],
+      "cons": ["No Train Station", "Traffic"]
+    },
+    {
+      "id": "kl_bangsar_south",
+      "name": "Bangsar South, KL",
+      "vibe": "Tech & Startup Hub",
+      "internet_speed_avg_mbps": 800,
+      "cost_of_living_usd": {
+        "rent_1br": 550,
+        "rent_3br": 900,
+        "coffee": 3.00,
+        "coworking_day_pass": 8
+      },
+      "digital_nomad_score": 9.2,
+      "pros": ["LRT Access", "High Speed Fiber", "Modern"],
+      "cons": ["Soul-less (Corporate Feel)"]
+    },
+    {
+      "id": "penang_georgetown",
+      "name": "George Town, Penang",
+      "vibe": "Heritage & Foodie",
+      "internet_speed_avg_mbps": 300,
+      "cost_of_living_usd": {
+        "rent_1br": 400,
+        "rent_3br": 700,
+        "coffee": 2.50,
+        "coworking_day_pass": 6
+      },
+      "digital_nomad_score": 9.0,
+      "pros": ["Culture", "Food", "Island Life"],
+      "cons": ["Traffic", "Hot"]
+    }
+  ]
+}
