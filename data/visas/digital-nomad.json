@@ -20,5 +20,105 @@
   "income_requirement": "More than USD 24,000 per year for Tech Talent/Professionals; More than USD 60,000 per year for Non-Tech Talent/Professionals.",
   "last_updated": "2023-10-27T10:00:00Z",
   "source_file": "my_mdec_derantau_2026-01-29T01-05-11-846Z.html",
-  "processed_at": "2026-01-29T01:23:57.424Z"
+  "processed_at": "2026-01-29T01:23:57.424Z",
+
+  "steps": [
+    {
+      "id": "check_eligibility",
+      "title": "Check your eligibility",
+      "description": "Verify that your income, job type and nationality match the DE Rantau criteria.",
+      "depends_on": [],
+      "estimated_duration_days": 1
+    },
+    {
+      "id": "prepare_documents",
+      "title": "Prepare your documents",
+      "description": "Gather passport, contracts, income proofs and any required letters before applying online.",
+      "depends_on": ["check_eligibility"],
+      "estimated_duration_days": 7
+    },
+    {
+      "id": "create_account",
+      "title": "Create DE Rantau portal account",
+      "description": "Register on the official MDEC DE Rantau portal and confirm your email.",
+      "depends_on": ["prepare_documents"],
+      "estimated_duration_days": 1
+    },
+    {
+      "id": "submit_online",
+      "title": "Submit your online application",
+      "description": "Fill in personal and professional details, upload all documents and review your file.",
+      "depends_on": ["create_account"],
+      "estimated_duration_days": 1
+    },
+    {
+      "id": "pay_fees",
+      "title": "Pay application fees",
+      "description": "Pay the application fees for main applicant and dependants via the portal.",
+      "depends_on": ["submit_online"],
+      "estimated_duration_days": 1
+    },
+    {
+      "id": "await_approval",
+      "title": "Await approval and follow-up",
+      "description": "MDEC reviews your application. They may request clarifications or additional documents.",
+      "depends_on": ["pay_fees"],
+      "estimated_duration_days": 30
+    }
+  ],
+
+  "required_documents": [
+    {
+      "id": "passport",
+      "name": "Passport",
+      "description": "Valid passport with at least 14 months validity from the date of application.",
+      "applies_to": ["main_applicant", "dependants"],
+      "source": "MDEC DE Rantau guidelines"
+    },
+    {
+      "id": "photo",
+      "name": "Passport-sized photo",
+      "description": "Recent color photo following Malaysian visa photo requirements.",
+      "applies_to": ["main_applicant", "dependants"]
+    },
+    {
+      "id": "employment_contract",
+      "name": "Employment / service contract",
+      "description": "Contract with foreign employer or clients showing at least 3 months remaining.",
+      "applies_to": ["main_applicant"]
+    },
+    {
+      "id": "income_proof",
+      "name": "Income proof",
+      "description": "Bank statements, payslips or invoices proving the minimum annual income requirement.",
+      "applies_to": ["main_applicant"]
+    },
+    {
+      "id": "background_check",
+      "name": "Police clearance / background check",
+      "description": "Clean criminal record certificate from country of origin or current residence (if required by the latest guidelines).",
+      "applies_to": ["main_applicant"]
+    }
+  ],
+
+  "funds": [
+    {
+      "id": "application_fees",
+      "label": "Application fees",
+      "when": "on_application",
+      "items": [
+        { "label": "Main applicant", "amount": 1000, "currency": "MYR" },
+        { "label": "Per dependant", "amount": 500, "currency": "MYR" }
+      ]
+    },
+    {
+      "id": "income_threshold",
+      "label": "Minimum annual income",
+      "when": "ongoing_requirement",
+      "items": [
+        { "label": "Tech / digital roles", "amount": 24000, "currency": "USD", "period": "year" },
+        { "label": "Non-tech roles", "amount": 60000, "currency": "USD", "period": "year" }
+      ]
+    }
+  ]
 }
