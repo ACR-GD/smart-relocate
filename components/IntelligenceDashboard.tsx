@@ -113,13 +113,13 @@ export default function IntelligenceDashboard() {
         setLogs((prev) => [...newLogs, ...prev].slice(0, 8));
       } catch (err) {
         const now = new Date().toLocaleTimeString();
-        setLogs((prev) => [
+        setLogs((prev: Log[]) => [
           {
             id: Date.now(),
             timestamp: now,
             type: 'warning',
             message: 'Monitoring backend unreachable.',
-          },
+          } as Log,
           ...prev,
         ].slice(0, 8));
       }
