@@ -1,111 +1,199 @@
 import fs from 'fs';
 import path from 'path';
+import Image from 'next/image';
 
 // Helper to read the database directly (since we are on the server)
 async function getVisaData() {
-    const dataDir = path.join(process.cwd(), 'data/visas');
-    
-    // Check if dir exists
-    if (!fs.existsSync(dataDir)) return [];
+  const dataDir = path.join(process.cwd(), 'data/visas');
 
-    const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
-    const visas = files.map(file => {
-        const content = fs.readFileSync(path.join(dataDir, file), 'utf8');
-        return JSON.parse(content);
-    });
-    
-    return visas;
+  // Check if dir exists
+  if (!fs.existsSync(dataDir)) return [];
+
+  const files = fs.readdirSync(dataDir).filter((f) => f.endsWith('.json'));
+  const visas = files.map((file) => {
+    const content = fs.readFileSync(path.join(dataDir, file), 'utf8');
+    return JSON.parse(content);
+  });
+
+  return visas;
 }
 
-import IntelligenceDashboard from "@/components/IntelligenceDashboard";
-import ChatWidget from "@/components/ChatWidget";
-
-// ... (existing imports)
+import IntelligenceDashboard from '@/components/IntelligenceDashboard';
+import ChatWidget from '@/components/ChatWidget';
 
 export default async function Home() {
   const visas = await getVisaData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 lg:p-24 bg-slate-50">
+    <main className="flex min-h-screen flex-col items-center bg-slate-950">
       <ChatWidget />
+
+      {/* Top bar */}
+      <div className="w-full flex justify-center border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+        <div className="max-w-6xl flex w-full items-center justify-between px-4 py-4 font-mono text-xs text-slate-300">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1">
+              <code className="font-bold text-slate-100">SmartRelocate.ai</code>
+              <span className="text-slate-500">• Malaysia</span>
+            </span>
+          </div>
+          <div className="hidden sm:flex items-center gap-2 text-[11px]">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400" />
+            </span>
+            <span className="font-medium text-emerald-300">Live monitoring online</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4">
-          <code className="font-bold">SmartRelocate.ai</code>&nbsp;| Malaysia 🇲🇾
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <span className="text-brand-600 font-bold flex items-center gap-2 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
-             <span className="relative flex h-3 w-3">
-               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-               <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
-             </span>
-             Live System
-          </span>
-        </div>
-      </div>
+      <section className="w-full border-b border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1 text-[11px] font-mono text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-sky-400" />
+              Immigration intelligence for Malaysia
+            </div>
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-50">
+                Move to Malaysia
+                <br />
+                <span className="text-sky-400">with a real plan</span>
+              </h1>
+              <p className="text-sm md:text-base text-slate-300 max-w-xl leading-relaxed">
+                SmartRelocate.ai combines live monitoring of government portals with curated visa journeys. No more
+                outdated PDFs or forum rumors — just a clear path from idea to approved visa.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 pt-1">
+              <a
+                href="/calculator"
+                className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold py-3 px-8 rounded-full text-sm shadow-lg shadow-sky-500/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
+              >
+                Check my eligibility
+              </a>
+              <a
+                href="/visas/digital-nomad"
+                className="bg-slate-900 hover:bg-slate-800 text-slate-100 border border-slate-700 font-semibold py-3 px-8 rounded-full text-sm shadow-sm hover:shadow-md transition-all flex items-center gap-2"
+              >
+                Explore DE Rantau journey
+              </a>
+            </div>
+            <div className="flex flex-wrap gap-4 pt-2 text-[11px] text-slate-400">
+              <div className="inline-flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span>Visas curated from official Malaysian sources</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <span>AI agents watching for regulatory changes</span>
+              </div>
+            </div>
+          </div>
 
-      <div className="relative flex place-items-center mt-12 mb-12">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6">
-             Move to Malaysia <br/>
-             <span className="text-brand-600">The Smart Way</span>
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Not just a wiki. We deploy <strong>AI agents</strong> that monitor government portals 24/7. When the laws change, you know first.
-          </p>
-          <div className="mt-8 flex gap-4 justify-center">
-            <a href="/calculator" className="bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                Check My Eligibility →
-            </a>
-            <a href="/investors" className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 font-bold py-4 px-10 rounded-full text-lg shadow-sm hover:shadow-md transition-all">
-                For Investors
-            </a>
+          {/* Hero image */}
+          <div className="relative h-64 sm:h-72 lg:h-80">
+            <div className="absolute inset-0 rounded-3xl border border-slate-800 bg-slate-900/60 overflow-hidden shadow-[0_24px_80px_rgba(15,23,42,0.9)]">
+              <Image
+                src="/images/kl-skyline-night.jpg"
+                alt="Kuala Lumpur skyline at night with city lights"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end gap-2 text-[11px] text-slate-200">
+                <div className="space-y-1">
+                  <p className="font-semibold flex items-center gap-2">
+                    Malaysia, from idea to landing
+                  </p>
+                  <p className="text-slate-300/80 max-w-[220px]">
+                    Built for people actually moving — not just browsing.
+                  </p>
+                </div>
+                <div className="rounded-xl bg-slate-950/70 border border-slate-800 px-3 py-2 text-right">
+                  <p className="text-[10px] text-slate-400">Today&apos;s focus</p>
+                  <p className="text-xs font-semibold text-slate-50">DE Rantau • Labuan • MM2H</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
+      </section>
+
       {/* THE WOW FACTOR */}
-      <IntelligenceDashboard />
+      <section className="w-full border-b border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10">
+          <IntelligenceDashboard />
+        </div>
+      </section>
 
-      {/* Visa Cards Grid */}
-      <div className="mt-24 mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left gap-6">
-        {visas.map((visa: any, idx: number) => (
-          <div
-            key={idx}
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 bg-white shadow-sm border-slate-200"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold text-slate-800`}>
-              {visa.visa_name || visa.country} 
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <div className="text-sm opacity-50 mb-4 font-mono text-slate-500">
-               LAST UPDATED: {visa.last_updated ? new Date(visa.last_updated).toLocaleDateString() : 'Manual Entry'}
+      {/* Visas grid */}
+      <section className="w-full bg-slate-950 pb-20 pt-10">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6">
+          <div className="flex items-center justify-between gap-2 mb-6">
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">Visa paths</p>
+              <h2 className="text-lg md:text-xl font-semibold text-slate-50 mt-1">Malaysia, structured</h2>
             </div>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-70 text-slate-600`}>
-              {visa.type || "Residency Visa"}
-            </p>
-            
-            <div className="mt-4 pt-4 border-t border-slate-100">
-                <div className="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                    <span>INCOME REQ</span>
+            <a
+              href="/visas"
+              className="text-[11px] text-sky-400 hover:text-sky-300 font-mono border-b border-transparent hover:border-sky-400/60"
+            >
+              View all dashboards
+            </a>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {visas.map((visa: any, idx: number) => (
+              <div
+                key={idx}
+                className="group rounded-2xl border border-slate-800 bg-slate-900/70 px-5 py-4 transition-colors hover:border-sky-500/60 hover:bg-slate-900 shadow-sm"
+              >
+                <h3 className="mb-2 text-base font-semibold text-slate-50 flex items-center justify-between gap-2">
+                  <span>{visa.visa_name || visa.country}</span>
+                  <span className="text-xs text-slate-500 group-hover:text-sky-400 transition-colors">→</span>
+                </h3>
+                <div className="text-[11px] mb-2 font-mono text-slate-500">
+                  LAST UPDATED:{' '}
+                  {visa.last_updated ? new Date(visa.last_updated).toLocaleDateString() : 'Manual Entry'}
                 </div>
-                <div className="text-sm text-slate-900">
-                    {typeof visa.income_requirement === 'object' 
-                        ? `${visa.income_requirement.amount} ${visa.income_requirement.currency}` 
-                        : visa.income_requirement || "N/A"}
+                <p className="m-0 text-xs text-slate-300 min-h-[2.5rem]">
+                  {visa.type || 'Residency Visa'}
+                </p>
+
+                <div className="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px]">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-slate-500">Income requirement</span>
+                    <span className="text-slate-100 font-mono">
+                      {typeof visa.income_requirement === 'object'
+                        ? `${visa.income_requirement.amount} ${visa.income_requirement.currency}`
+                        : visa.income_requirement || 'N/A'}
+                    </span>
+                  </div>
+                  <a
+                    href={
+                      visa.visa_name?.toLowerCase().includes('rantau') || visa.visa_name?.toLowerCase().includes('nomad')
+                        ? '/visas/digital-nomad'
+                        : '/calculator'
+                    }
+                    className="text-[11px] text-sky-400 hover:text-sky-300 font-semibold"
+                  >
+                    View details
+                  </a>
                 </div>
+              </div>
+            ))}
+
+            {/* Placeholder for "Coming Soon" */}
+            <div className="group rounded-2xl border border-dashed border-slate-700 px-5 py-4 bg-slate-900/40 opacity-80 flex flex-col justify-center items-center">
+              <h3 className="text-sm font-semibold text-slate-400">MM2H (Silver/Gold)</h3>
+              <p className="text-xs text-slate-500 mt-1">Full dashboard coming soon.</p>
             </div>
           </div>
-        ))}
-
-        {/* Placeholder for "Coming Soon" */}
-        <div className="group rounded-lg border border-dashed border-slate-300 px-5 py-4 bg-slate-50 opacity-70 flex flex-col justify-center items-center">
-            <h2 className="text-xl font-semibold text-slate-400">MM2H (Silver/Gold)</h2>
-            <p className="text-sm text-slate-400 mt-2">Coming Soon</p>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

@@ -261,7 +261,32 @@ export default async function DigitalNomadVisaPage() {
         </div>
 
         {/* Documents section */}
-        <section id="documents" className="mt-4 space-y-4">
+        {/* Lifestyle visuals */}
+        <section className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 overflow-hidden">
+            <div className="h-28 bg-[url('/images/penang-seafront.jpg')] bg-cover bg-center" />
+            <div className="p-3 space-y-1">
+              <p className="text-[11px] text-slate-400 uppercase tracking-[0.18em]">Penang</p>
+              <p className="text-xs text-slate-200">Seafront cafes, heritage shophouses, and strong nomad scene.</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 overflow-hidden">
+            <div className="h-28 bg-[url('/images/kl-cowork.jpg')] bg-cover bg-center" />
+            <div className="p-3 space-y-1">
+              <p className="text-[11px] text-slate-400 uppercase tracking-[0.18em]">Kuala Lumpur</p>
+              <p className="text-xs text-slate-200">High-rise living, coworking hubs and fast airport access.</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/70 overflow-hidden">
+            <div className="h-28 bg-[url('/images/ipoh-green.jpg')] bg-cover bg-center" />
+            <div className="p-3 space-y-1">
+              <p className="text-[11px] text-slate-400 uppercase tracking-[0.18em]">Ipoh</p>
+              <p className="text-xs text-slate-200">Slower pace, greenery and easier family life.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="documents" className="mt-8 space-y-4">
           <div className="flex items-center justify-between gap-2">
             <div>
               <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">Document kit</p>
