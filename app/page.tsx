@@ -51,9 +51,17 @@ export default async function Home() {
       <section className="w-full border-b border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1 text-[11px] font-mono text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-sky-400" />
-              Immigration intelligence for Malaysia
+            <div className="inline-flex flex-col gap-1 text-[11px] font-mono text-slate-300">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1">
+                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                Immigration intelligence for Malaysia
+              </span>
+              <span className="text-slate-400">
+                The AI agent that prepares your move to Malaysia end-to-end.
+              </span>
+              <span className="text-slate-500">
+                L’agent IA qui prépare ton déménagement en Malaisie de A à Z.
+              </span>
             </div>
             <div className="space-y-4">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-50">
@@ -79,16 +87,6 @@ export default async function Home() {
               >
                 Explore DE Rantau journey
               </a>
-            </div>
-            <div className="flex flex-wrap gap-4 pt-2 text-[11px] text-slate-400">
-              <div className="inline-flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Visas curated from official Malaysian sources</span>
-              </div>
-              <div className="inline-flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-sky-400" />
-                <span>AI agents watching for regulatory changes</span>
-              </div>
             </div>
           </div>
 
@@ -122,10 +120,107 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="w-full border-b border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
+          <div className="flex flex-col gap-1">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">How it works</p>
+            <h2 className="text-lg md:text-xl font-semibold text-slate-50">
+              Full AI agents, from first question to prepared dossier
+            </h2>
+            <p className="text-xs md:text-sm text-slate-400 max-w-2xl">
+              Not a law firm, not a blog. SmartRelocate is a set of AI agents specialised in Malaysian immigration.
+              They analyse your profile, build your plan, and keep it in sync with official rules.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3 text-xs md:text-sm text-slate-200">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+              <p className="font-semibold">1. The AI maps your situation</p>
+              <p className="text-slate-300">
+                Answer a few questions about income, job, family and timing. The agent selects the best visa options
+                and shows the conditions clearly.
+              </p>
+              <p className="text-[11px] text-slate-500">
+                FR: L’IA analyse ta situation et propose les options de visa les plus adaptées.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+              <p className="font-semibold">2. It builds your dossier plan</p>
+              <p className="text-slate-300">
+                For each visa: steps, documents, amounts and timing. The agent builds a living checklist and draft
+                forms ready to copy to official portals.
+              </p>
+              <p className="text-[11px] text-slate-500">
+                FR: Elle construit ton plan de dossier, étape par étape, avec les bons documents.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+              <p className="font-semibold">3. It watches rules in real time</p>
+              <p className="text-slate-300">
+                AI watchers scan Malaysian government sites. If something changes and impacts you, you know before the
+                surprise at the counter.
+              </p>
+              <p className="text-[11px] text-slate-500">
+                FR: Des agents IA surveillent les portails officiels. S’il y a un changement qui t’impacte, tu es prévenu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* THE WOW FACTOR */}
       <section className="w-full border-b border-slate-800 bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10">
           <IntelligenceDashboard />
+        </div>
+      </section>
+
+      {/* What we are / are not */}
+      <section className="w-full border-b border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
+          <div className="flex flex-col gap-1">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">
+              What we are / Ce que nous sommes
+            </p>
+            <h2 className="text-lg md:text-xl font-semibold text-slate-50">
+              Clear boundaries, strong automation
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 text-xs md:text-sm">
+            <div className="rounded-2xl border border-emerald-700/60 bg-emerald-950/40 p-4 space-y-2">
+              <p className="font-semibold text-emerald-200">✅ What we are</p>
+              <ul className="list-disc list-inside space-y-1 text-slate-100">
+                <li>An intelligence system focused on Malaysian immigration.</li>
+                <li>AI agents that monitor official sources and structure the rules into clear journeys.</li>
+                <li>A copilot that gives you a concrete plan: what to do, in which order, with which documents.</li>
+              </ul>
+              <p className="text-[11px] text-emerald-200/80 pt-1">
+                FR: Un système d’IA dédié à la Malaisie, qui transforme les règles en plan d’action clair.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-rose-800/60 bg-rose-950/40 p-4 space-y-2">
+              <p className="font-semibold text-rose-200">🚫 What we are not</p>
+              <ul className="list-disc list-inside space-y-1 text-slate-100">
+                <li>We are not a law firm or a human immigration agent.</li>
+                <li>We don&apos;t officially submit your case as a legal representative.</li>
+                <li>We don&apos;t replace tailored legal or tax advice for complex situations.</li>
+              </ul>
+              <p className="text-[11px] text-rose-200/80 pt-1">
+                FR: Nous ne sommes ni cabinet d’avocats, ni représentant légal. Nous préparons et clarifions, tu gardes
+                le dernier mot.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-[11px] text-slate-500 max-w-3xl">
+            In plain terms: we push AI as far as it can go today (monitoring, structuring, preparation, explanation).
+            You keep control over every submission and every decision.
+            <br />
+            FR: En clair, l’IA va le plus loin possible (veille, structure, préparation). Tu restes aux commandes pour
+            les décisions et l’envoi final.
+          </p>
         </div>
       </section>
 
