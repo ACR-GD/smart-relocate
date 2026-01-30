@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scrape:sources": "node scripts/scrape_sources.js",
+    "monitor:changes": "node scripts/check_changes.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

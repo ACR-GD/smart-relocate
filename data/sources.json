@@ -1,0 +1,20 @@
+[
+  {
+    "id": "de_rantau",
+    "name": "MDEC DE Rantau Nomad Pass",
+    "url": "https://mdec.my/derantau",
+    "category": "digital_nomad"
+  },
+  {
+    "id": "labuan_fsa",
+    "name": "Labuan FSA - Work/Business Visa",
+    "url": "https://www.labuanfsa.gov.my/",
+    "category": "labuan"
+  },
+  {
+    "id": "mm2h_motac",
+    "name": "Malaysia My Second Home (MM2H) - MOTAC",
+    "url": "https://www.malaysia.gov.my/portal/content/28905",
+    "category": "mm2h"
+  }
+]
