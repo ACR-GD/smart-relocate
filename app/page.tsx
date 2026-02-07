@@ -177,6 +177,20 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* RM converter */}
+      <section className="w-full border-b border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
+          <div className="max-w-md">
+            <h2 className="text-lg md:text-xl font-semibold mb-2">Understand RM in your currency</h2>
+            <p className="text-xs md:text-sm text-slate-400 mb-4">
+              Quickly see what Malaysian Ringgit amounts mean in USD, EUR or GBP. Helpful when comparing visa income
+              thresholds or planning your budget.
+            </p>
+            <CurrencyConverter />
+          </div>
+        </div>
+      </section>
+
       {/* What we are / are not */}
       <section className="w-full border-b border-slate-800 bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
@@ -234,9 +248,6 @@ export default async function Home() {
               <h2 className="text-lg md:text-xl font-semibold text-slate-50 mt-1">Malaysia, structured</h2>
             </div>
             <div className="flex items-center gap-3">
-              <div className="hidden md:block">
-                <CurrencyConverter />
-              </div>
               <a
                 href="/visas"
                 className="text-[11px] text-sky-400 hover:text-sky-300 font-mono border-b border-transparent hover:border-sky-400/60"
