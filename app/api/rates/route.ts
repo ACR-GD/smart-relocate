@@ -2,8 +2,10 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    // Frankfurter.dev: free FX API, no key required
+    // We ask: 1 MYR expressed in USD, EUR, GBP
     const res = await fetch(
-      "https://api.exchangerate.host/latest?base=MYR&symbols=USD,EUR,GBP",
+      "https://api.frankfurter.app/latest?amount=1&from=MYR&to=USD,EUR,GBP",
       { next: { revalidate: 3600 } }
     );
 
@@ -12,6 +14,7 @@ export async function GET() {
     }
 
     const data = await res.json();
+    // Frankfurter returns: { amount, base, date, rates: { USD: x, EUR: y, ... } }
     return NextResponse.json({ base: data.base, date: data.date, rates: data.rates });
   } catch (err) {
     console.error("Error fetching FX rates", err);
