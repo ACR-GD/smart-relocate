@@ -26,7 +26,7 @@ export default async function Home() {
   const visas = await getVisaData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-slate-950">
+    <main className="flex min-h-screen flex-col items-center bg-slate-50 dark:bg-slate-950">
       <ChatWidget />
 
       {/* Top bar */}
