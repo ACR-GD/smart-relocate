@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
+import { CurrencyConverter } from '@/components/CurrencyConverter';
 
 // Helper to read the database directly (since we are on the server)
 async function getVisaData() {
@@ -232,12 +233,17 @@ export default async function Home() {
               <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">Visa paths</p>
               <h2 className="text-lg md:text-xl font-semibold text-slate-50 mt-1">Malaysia, structured</h2>
             </div>
-            <a
-              href="/visas"
-              className="text-[11px] text-sky-400 hover:text-sky-300 font-mono border-b border-transparent hover:border-sky-400/60"
-            >
-              View all dashboards
-            </a>
+            <div className="flex items-center gap-3">
+              <div className="hidden md:block">
+                <CurrencyConverter />
+              </div>
+              <a
+                href="/visas"
+                className="text-[11px] text-sky-400 hover:text-sky-300 font-mono border-b border-transparent hover:border-sky-400/60"
+              >
+                View all dashboards
+              </a>
+            </div>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
