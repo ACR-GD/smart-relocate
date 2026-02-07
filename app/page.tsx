@@ -179,14 +179,18 @@ export default async function Home() {
 
       {/* RM converter */}
       <section className="w-full border-b border-slate-800 bg-slate-950">
-        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
-          <div className="max-w-md">
-            <h2 className="text-lg md:text-xl font-semibold mb-2">Understand RM in your currency</h2>
-            <p className="text-xs md:text-sm text-slate-400 mb-4">
-              Quickly see what Malaysian Ringgit amounts mean in USD, EUR or GBP. Helpful when comparing visa income
-              thresholds or planning your budget.
-            </p>
-            <CurrencyConverter />
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10">
+          <div className="grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-center">
+            <div className="space-y-3">
+              <h2 className="text-lg md:text-2xl font-semibold">Understand RM in your currency</h2>
+              <p className="text-xs md:text-sm text-slate-400 max-w-md">
+                Quickly see what Malaysian Ringgit amounts mean in USD, EUR or GBP. Helpful when comparing visa income
+                thresholds or planning your budget.
+              </p>
+            </div>
+            <div className="md:justify-self-end w-full max-w-sm">
+              <CurrencyConverter />
+            </div>
           </div>
         </div>
       </section>
