@@ -26,14 +26,14 @@ export default async function Home() {
   const visas = await getVisaData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <main className="flex min-h-screen flex-col items-center bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-50">
       <ChatWidget />
 
       {/* Top bar */}
-      <div className="w-full flex justify-center border-b border-slate-200 dark:border-slate-800 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur">
+      <div className="w-full flex justify-center border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur">
         <div className="max-w-6xl flex w-full items-center justify-between px-4 py-4 font-mono text-xs text-slate-600 dark:text-slate-300">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-3 py-1">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 px-3 py-1">
               <code className="font-bold text-slate-900 dark:text-slate-100">SmartRelocate.ai</code>
               <span className="text-slate-500">• Malaysia</span>
             </span>
@@ -52,11 +52,11 @@ export default async function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-gradient-to-br dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
           <div className="space-y-6">
             <div className="inline-flex flex-col gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-300">
-              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-3 py-1">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 px-3 py-1">
                 <span className="w-2 h-2 rounded-full bg-sky-400" />
                 Immigration intelligence for Malaysia
               </span>
@@ -125,7 +125,7 @@ export default async function Home() {
       </section>
 
       {/* How it works */}
-      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
           <div className="flex flex-col gap-1">
             <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">How it works</p>
