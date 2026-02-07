@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
 import { CurrencyConverter } from '@/components/CurrencyConverter';
+import Footer from '@/components/Footer';
 
 // Helper to read the database directly (since we are on the server)
 async function getVisaData() {
@@ -244,7 +245,7 @@ export default async function Home() {
       </section>
 
       {/* Visas grid */}
-      <section className="w-full bg-slate-950 pb-20 pt-10">
+      <section className="w-full bg-slate-950 pb-12 pt-10">
         <div className="max-w-6xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between gap-2 mb-6">
             <div>
@@ -310,6 +311,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
