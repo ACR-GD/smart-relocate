@@ -26,15 +26,15 @@ export default async function Home() {
   const visas = await getVisaData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-slate-50 dark:bg-slate-950">
+    <main className="flex min-h-screen flex-col items-center bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
       <ChatWidget />
 
       {/* Top bar */}
-      <div className="w-full flex justify-center border-b border-slate-800 bg-slate-950/90 backdrop-blur">
-        <div className="max-w-6xl flex w-full items-center justify-between px-4 py-4 font-mono text-xs text-slate-300">
+      <div className="w-full flex justify-center border-b border-slate-200 dark:border-slate-800 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur">
+        <div className="max-w-6xl flex w-full items-center justify-between px-4 py-4 font-mono text-xs text-slate-600 dark:text-slate-300">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1">
-              <code className="font-bold text-slate-100">SmartRelocate.ai</code>
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-3 py-1">
+              <code className="font-bold text-slate-900 dark:text-slate-100">SmartRelocate.ai</code>
               <span className="text-slate-500">• Malaysia</span>
             </span>
           </div>
@@ -52,15 +52,15 @@ export default async function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full border-b border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12 lg:py-20 grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
           <div className="space-y-6">
-            <div className="inline-flex flex-col gap-1 text-[11px] font-mono text-slate-300">
-              <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1">
+            <div className="inline-flex flex-col gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-300">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-3 py-1">
                 <span className="w-2 h-2 rounded-full bg-sky-400" />
                 Immigration intelligence for Malaysia
               </span>
-              <span className="text-slate-400">
+              <span className="text-slate-500 dark:text-slate-400">
                 An AI-native relocation copilot for Malaysia.
               </span>
               <span className="text-slate-500">
@@ -68,12 +68,12 @@ export default async function Home() {
               </span>
             </div>
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-50">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
                 Move to Malaysia
                 <br />
                 <span className="text-sky-400">with an AI copilot</span>
               </h1>
-              <p className="text-sm md:text-base text-slate-300 max-w-xl leading-relaxed">
+              <p className="text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
                 SmartRelocate.ai is an AI-native relocation copilot. It maps your profile to real visa options, builds
                 your dossier plan, and watches official rules for changes – so you don&apos;t depend on agents, forums or luck.
               </p>
@@ -125,11 +125,11 @@ export default async function Home() {
       </section>
 
       {/* How it works */}
-      <section className="w-full border-b border-slate-800 bg-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
           <div className="flex flex-col gap-1">
             <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">How it works</p>
-            <h2 className="text-lg md:text-xl font-semibold text-slate-50">
+            <h2 className="text-lg md:text-xl font-semibold">
               Three AI engines, one clear journey
             </h2>
             <p className="text-xs md:text-sm text-slate-400 max-w-2xl">
@@ -138,8 +138,8 @@ export default async function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 text-xs md:text-sm text-slate-200">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+          <div className="grid gap-4 md:grid-cols-3 text-xs md:text-sm text-slate-800 dark:text-slate-200">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 p-4 space-y-2">
               <p className="font-semibold">1. Eligibility engine</p>
               <p className="text-slate-300">
                 Answer a few questions about income, savings, family and company. The engine scores each Malaysian visa
@@ -149,7 +149,7 @@ export default async function Home() {
                 FR: L’IA analyse ta situation et propose les options de visa les plus adaptées.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 p-4 space-y-2">
               <p className="font-semibold">2. Dossier builder</p>
               <p className="text-slate-300">
                 For each visa: clear steps, documents, fees and timing. The AI generates a personalized checklist and
@@ -159,7 +159,7 @@ export default async function Home() {
                 FR: Elle construit ton plan de dossier, étape par étape, avec les bons documents.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 space-y-2">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 p-4 space-y-2">
               <p className="font-semibold">3. Rule watcher</p>
               <p className="text-slate-300">
                 AI agents scan Malaysian government portals and official documents. When thresholds, documents or
@@ -174,26 +174,26 @@ export default async function Home() {
       </section>
 
       {/* THE WOW FACTOR */}
-      <section className="w-full border-b border-slate-800 bg-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10">
           <IntelligenceDashboard />
         </div>
       </section>
 
       {/* What we are / are not */}
-      <section className="w-full border-b border-slate-800 bg-slate-950">
+      <section className="w-full border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 space-y-6">
           <div className="flex flex-col gap-1">
             <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 font-medium">
               What we are / Ce que nous sommes
             </p>
-            <h2 className="text-lg md:text-xl font-semibold text-slate-50">
+            <h2 className="text-lg md:text-xl font-semibold">
               Clear boundaries, strong automation
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 text-xs md:text-sm">
-            <div className="rounded-2xl border border-emerald-700/60 bg-emerald-950/40 p-4 space-y-2">
+          <div className="grid gap-4 md:grid-cols-2 text-xs md:text-sm text-slate-800 dark:text-slate-100">
+            <div className="rounded-2xl border border-emerald-200 dark:border-emerald-700/60 bg-emerald-50 dark:bg-emerald-950/40 p-4 space-y-2">
               <p className="font-semibold text-emerald-200">✅ What we are</p>
               <ul className="list-disc list-inside space-y-1 text-slate-100">
                 <li>An intelligence system focused on Malaysian immigration.</li>
@@ -204,7 +204,7 @@ export default async function Home() {
                 FR: Un système d’IA dédié à la Malaisie, qui transforme les règles en plan d’action clair.
               </p>
             </div>
-            <div className="rounded-2xl border border-rose-800/60 bg-rose-950/40 p-4 space-y-2">
+            <div className="rounded-2xl border border-rose-200 dark:border-rose-800/60 bg-rose-50 dark:bg-rose-950/40 p-4 space-y-2">
               <p className="font-semibold text-rose-200">🚫 What we are not</p>
               <ul className="list-disc list-inside space-y-1 text-slate-100">
                 <li>We are not a law firm or a human immigration agent.</li>
@@ -229,7 +229,7 @@ export default async function Home() {
       </section>
 
       {/* Visas grid */}
-      <section className="w-full bg-slate-950 pb-20 pt-10">
+      <section className="w-full bg-slate-50 dark:bg-slate-950 pb-20 pt-10">
         <div className="max-w-6xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between gap-2 mb-6">
             <div>
