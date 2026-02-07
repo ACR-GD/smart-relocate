@@ -226,7 +226,7 @@ export default async function Home() {
       </section>
 
       {/* Visas grid */}
-      <section className="w-full bg-slate-50 dark:bg-slate-950 pb-20 pt-10">
+      <section className="w-full bg-slate-950 pb-20 pt-10">
         <div className="max-w-6xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between gap-2 mb-6">
             <div>
