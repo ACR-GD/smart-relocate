@@ -18,10 +18,7 @@ export function CurrencyConverter() {
     let cancelled = false;
     async function load() {
       try {
-        // Call external FX API directly from the client for simplicity
-        const res = await fetch(
-          "https://api.exchangerate.host/latest?base=MYR&symbols=USD,EUR,GBP"
-        );
+        const res = await fetch("/api/rates");
         if (!res.ok) throw new Error("Failed to load rates");
         const data = await res.json();
         if (!cancelled) {
